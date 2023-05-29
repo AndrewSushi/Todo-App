@@ -15,4 +15,4 @@ def submit():
     time = request.args["time"]
     event = (todo, time)
     psuedoDB.append(event)
-    return render_template('home.html', DB=event)
+    return render_template('home.html', DB=psuedoDB)
