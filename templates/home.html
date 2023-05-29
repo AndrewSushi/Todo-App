@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Todo List</h1>
+{% for action in DB %}
+    <h3>{{action}}</h3>
+{% endfor %}
 <form action="/handle">
     <input type="text" name="action">
     <button>Submit</button>

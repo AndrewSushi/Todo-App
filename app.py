@@ -3,6 +3,8 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
 
+psuedoDB = []
+
 @app.route('/')
 def home():
     return render_template('home.html')
@@ -10,4 +12,5 @@ def home():
 @app.route('/handle')
 def submit():
     todo = request.args["action"]
-    return render_template('form_submit.html', todo=todo)
+    psuedoDB.append(todo)
+    return render_template('home.html', DB=psuedoDB)
