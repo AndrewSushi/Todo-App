@@ -8,11 +8,13 @@
             <th>Due Date</th>
             <th>Priority</th>
         </tr>
+        {% for event in DB %}
         <tr>
-            {% for event in DB %}
-                <p>{{event[0]}} {{event[1]}}</p>
-            {% endfor %}
+            <td>{{ event[0] }}</td>
+            <td>{{ event[1] }}</td>
+            <td>{{ event[2] }}</td>
         </tr>
+        {% endfor %}
     </table>
 </div>
 
