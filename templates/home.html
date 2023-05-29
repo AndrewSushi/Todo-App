@@ -5,7 +5,10 @@
     <h3>{{action}}</h3>
 {% endfor %}
 <form action="/handle">
-    <input type="text" name="action">
+    <span>Enter a task: </span>
+    <input type="text" name="naction" placeholder="Enter a Task">
+    <span>Date: </span>
+    <input type="text" name="time" placeholder="MM/DD/YY">
     <button>Submit</button>
 </form>
 {% endblock %}
