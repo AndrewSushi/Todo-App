@@ -12,5 +12,7 @@ def home():
 @app.route('/handle')
 def submit():
     todo = request.args["action"]
-    psuedoDB.append(todo)
-    return render_template('home.html', DB=psuedoDB)
+    time = request.args["time"]
+    event = (todo, time)
+    psuedoDB.append(event)
+    return render_template('home.html', DB=event)
