@@ -2,11 +2,11 @@
 {% block content %}
 <h1>Todo List</h1>
 {% for event in DB %}
-    <h3>{{event.todo}} {{event.time}}</h3>
+    <h3>{{event[0]}} {{event[1]}}</h3>
 {% endfor %}
 <form action="/handle">
     <span>Enter a task: </span>
-    <input type="text" name="action" placeholder="Enter a Task">
+    <input type="text" name="action" placeholder="Task">
     <span>Date: </span>
     <input type="text" name="time" placeholder="MM/DD/YY">
     <button>Submit</button>

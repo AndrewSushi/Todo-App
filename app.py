@@ -7,7 +7,7 @@ psuedoDB = []
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', DB=psuedoDB)
 
 @app.route('/handle')
 def submit():
@@ -15,4 +15,4 @@ def submit():
     time = request.args["time"]
     event = (todo, time)
     psuedoDB.append(event)
-    return render_template('home.html', DB=psuedoDB)
+    return redirect('/')
