@@ -3,7 +3,9 @@
 <h1>Todo List</h1>
 <div id="events">
     {% for event in DB %}
-        <h3>{{event[0]}} {{event[1]}}</h3>
+        <div id="task">
+            <h3>{{event[0]}} {{event[1]}}</h3> <button>Remove</button>
+        </div>
     {% endfor %}
 </div>
 
