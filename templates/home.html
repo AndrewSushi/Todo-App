@@ -5,7 +5,7 @@
     <table>
         <tr>
             <th>Task</th>
-            <th>Due Date</th>
+            <th>Time</th>
             <th>Priority</th>
         </tr>
         {% for event in DB %}
@@ -21,8 +21,8 @@
 <form action="/handle">
     <p>Enter a task: </p>
     <input type="text" name="action" placeholder="Task">
-    <p>Date: </p>
-    <input type="text" name="time" placeholder="MM/DD/YY">
+    <p>Time: </p>
+    <input type="text" name="time" placeholder="00:00">
     <p>Prority</p>
     <select name="priority">
         <option>Low</option>

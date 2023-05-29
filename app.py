@@ -13,6 +13,7 @@ def home():
 def submit():
     todo = request.args["action"]
     time = request.args["time"]
-    event = (todo, time)
+    priority = request.args["priority"]
+    event = (todo, time, priority)
     psuedoDB.append(event)
     return redirect('/')
