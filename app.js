@@ -1,0 +1,1 @@
+events = document.getElementById("events")
